@@ -1,0 +1,10 @@
+case3:debug display multiple messages
+
+---
+ - name: debug display multiple messages
+   hosts: all
+   tasks:
+     - debug:
+         msg:
+          - "welcome to varains"
+          - "welcome to nareshins"
