@@ -1,0 +1,27 @@
+case15:debug displays no of commands  with using tags
+
+
+---
+ - name: display no of commands and using tags
+   hosts: all
+   tasks:
+     - name: display mounted information
+       command: df -h
+       register: mount
+       tags: mount
+     - debug: var=mount.stdout
+     - name: display swap information
+       command: swapon -s
+       tags: swap
+       register: swap
+     - debug: var=swap.stdout
+     - name: display uptime
+       command: uptime
+       tags: uptime
+       register: up
+     - debug: var=up.stdout
+     - name: display hostname
+       command: hostname
+       register: host
+       tags: host
+     - debug: var=host.stdout
