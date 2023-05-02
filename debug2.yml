@@ -1,0 +1,9 @@
+case2: debug msg display
+
+---
+ - name:debug msg display
+   hosts: all
+   tasks:
+     - name: display varains msg
+       debug:
+         msg: "welcome to varains"
