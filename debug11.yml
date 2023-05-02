@@ -1,0 +1,10 @@
+case11:debug displays  the no output		
+
+
+
+---
+ - name: debug msg checking kernel version
+   hosts: all
+   tasks:
+     - name: server kernel version
+       command: uname -a
