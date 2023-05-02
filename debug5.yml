@@ -1,0 +1,9 @@
+case5:debug variable displays the inventory_hostname		 
+		 
+---
+ - name: variables display the debug module
+   hosts: all
+   tasks:
+     - name: displays inventory hostname in vars
+       debug:
+         var: inventory_hostname
