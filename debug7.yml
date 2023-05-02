@@ -1,0 +1,13 @@
+case7:debug displays the facts variables & messages
+
+
+---
+ - name: display the facts
+   hosts: all
+   tasks:
+     - name: display all facts variables
+       debug:
+         msg:
+             my hostname  is {{ansible_hostname}}
+             my ipaddress is {{ansible_facts['fqdn']}}
+             my ipv4      is {{ansible_default_ipv4}}
