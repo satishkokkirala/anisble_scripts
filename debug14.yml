@@ -1,0 +1,24 @@
+case14:debug and displays with register multiple commands
+
+
+
+---
+ - name: display no of commands
+   hosts: all
+   tasks:
+     - name: display kernel version
+       command: uname -a
+       register: kernel
+     - debug: var=kernel.stdout
+     - name: display date
+       command: date
+       register: date
+     - debug: var=date.stdout
+     - name: display uptime
+       command: uptime
+       register: up
+     - debug: var=up.stdout
+     - name: display hostname
+       command: hostname
+       register: host
+     - debug: var=host.stdout
