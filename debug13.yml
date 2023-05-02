@@ -1,0 +1,12 @@
+case13:debug displays registered kernel version  standard_output 
+	 
+	 
+
+---
+ - name: debug msg checking kernel version
+   hosts: all
+   tasks:
+     - name: server kernel version
+       command: uname -a
+       register: kernel
+     - debug: var=kernel.stdout
