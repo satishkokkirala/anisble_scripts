@@ -1,0 +1,15 @@
+case10:debug displays the variable msgs at a time
+
+
+---
+ - name: debug displays variables
+   hosts: all
+   vars:
+    os: "linux"
+    cloud: "aws"
+    tools: "devops"
+   tasks:
+     - name: displays msg and variables at a time
+       debug: msg= "i love {{os}}"
+       debug: msg= "i hate {{cloud}}"
+       debug: msg= "i love {{tools}}"
