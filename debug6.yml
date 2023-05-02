@@ -1,0 +1,10 @@
+case6:debug variables & msg displays the ip address 
+
+---
+ - name: debug variables ip and hostname
+   hosts: all
+   tasks:
+     - name: displays ip address
+       debug:
+         msg: "my ansible server ip address:{{ansible_default_ipv4.address}}"
+#         var: ansible_default_ipv4.address
