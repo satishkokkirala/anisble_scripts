@@ -1,0 +1,10 @@
+case8: verbosity displays server ipaddress 
+
+---
+ - name: debug verbosity displays ipv4
+   hosts: all
+   tasks:
+     - name: display ipaddress verbosity
+       debug:
+         msg: "my ip address server:{ansible_default_ipv4.address}}"
+         verbosity: 3
