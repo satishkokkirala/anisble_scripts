@@ -1,0 +1,12 @@
+case12:debug displays registered kernel version output  
+
+
+
+---
+ - name: debug msg checking kernel version
+   hosts: all
+   tasks:
+     - name: displays kernel version
+       command: uname -a
+       register: kernel
+     - debug: var=kernel
