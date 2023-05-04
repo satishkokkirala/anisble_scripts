@@ -1,0 +1,8 @@
+---
+ - name: this is httpd playbook
+   hosts: all
+   tasks:
+     - name: website
+       file: dest=/var/www/html/index.html state=touch
+     - name: content
+       lineinfile: dest=/var/www/html/index.html line='THIS IS SATISH'
