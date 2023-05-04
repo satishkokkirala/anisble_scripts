@@ -1,0 +1,6 @@
+---
+ - name: this is httpd playbook
+   hosts: all
+   tasks:
+     - name: httpd package
+       yum: name=httpd state=present
